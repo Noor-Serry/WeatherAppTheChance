@@ -24,8 +24,7 @@ class WeatherViewModel(
     init {
         viewModelScope.launch(dispatcherProvider.IO) {
             try {
-                _state.update {weatherToWeatherUiState (getWeatherUseCase.invoke().copy(isDay = false
-                ))}
+                _state.update {weatherToWeatherUiState (getWeatherUseCase())}
             } catch (exception: Exception) {
               Log.e("getWeatherUseCase",exception.message.toString())
             }
