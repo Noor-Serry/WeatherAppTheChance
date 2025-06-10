@@ -1,0 +1,65 @@
+{
+  ConstraintSets: {
+    start: {
+      image: {
+        width: 250,
+        height: 250,
+        start: [
+          'parent',
+          'start'
+        ],
+        end: [
+          'parent',
+          'end',
+          0
+        ],
+        top: [
+          'parent',
+          'top'
+        ]
+      },
+      weatherDetails: {
+        start: [
+          'parent',
+          'start',
+          'end'
+        ],
+        end: [
+          'parent',
+          'end',
+          0
+        ],
+        top: [
+          'image',
+          'bottom'
+        ]
+      }
+    },
+    end: {
+      image: {
+        width: 124,
+        height: 112,
+        start: [
+          'parent',
+          'start',
+          12
+        ],
+        top: [
+          'parent',
+          'top'
+        ],
+        bottom: ['parent', 'bottom', 0],
+      },
+      weatherDetails: {
+        end: [
+          'parent',
+          'end',
+          12
+        ],
+        top: [
+          'parent',
+          'top']
+      }
+    }
+  }
+}
